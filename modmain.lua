@@ -1,10 +1,15 @@
 
 local DebugSpawn = GLOBAL.DebugSpawn
 
+
 local resources_table = {
-  { prefab = "log",   count = GetModConfigData("LOGS_COUNT")  },
-  { prefab = "flint", count = GetModConfigData("FLINT_COUNT")  },
-  { prefab = "rocks", count = GetModConfigData("ROCKS_COUNT") },
+  { prefab = "log",        count = GetModConfigData("Logs")  },
+  { prefab = "flint",      count = GetModConfigData("Flint")  },
+  { prefab = "rocks",      count = GetModConfigData("Rocks") },
+  { prefab = "goldnugget", count = GetModConfigData("Gold") },
+  { prefab = "twigs",      count = GetModConfigData("Twigs") },
+  { prefab = "cutgrass",   count = GetModConfigData("Grass") },
+  { prefab = "rocks",      count = GetModConfigData("Gears") },
 }
 
 

@@ -52,67 +52,16 @@ available_counts = {
 
 configuration_options = {}
 
-function R(name, label)
-  label = label or name
+resource = {
+  "Logs", "Flint", "Rocks", "Gold",
+  "Twigs", "Grass", "Gears", 
+}
 
-  configuration_options[#configuration_options + 1] = {
-    name    = "LOGS_COUNT",
-    label   = "Logs",
+for i=1,#resource do 
+  configuration_options[i] = {
+    name    = resource[i],
+    label   = resource[i],
     options = available_counts,
     default = 0
   }
 end
-
--- R("Logs")
--- R("Flint")
--- R("Rocks")
--- R("Gold")
--- R("Sticks")
--- R("Grass")
--- R("Gears")
-
-
-configuration_options = {
-  {
-    name    = "LOGS_COUNT",
-    label   = "Logs",
-    options = available_counts,
-    default = 0
-  },
-  {
-    name    = "FLINT_COUNT",
-    label   = "Flint",
-    options = available_counts,
-    default = 0
-  },
-  {
-    name    = "ROCKS_COUNT",
-    label   = "Rocks",
-    options = available_counts,
-    default = 0
-  },
-  {
-    name    = "GOLD_COUNT",
-    label   = "Gold",
-    options = available_counts,
-    default = 0
-  },
-  {
-    name    = "STICKS_COUNT",
-    label   = "Sticks",
-    options = available_counts,
-    default = 0
-  },
-  {
-    name    = "GRASS_COUNT",
-    label   = "Cut Grass",
-    options = available_counts,
-    default = 0
-  },
-  {
-    name    = "GEARS_COUNT",
-    label   = "Gears",
-    options = available_counts,
-    default = 0
-  }
-}
