@@ -32,25 +32,22 @@ server_filter_tags = {
 forumthread = ""
 
 
-available_counts = {
-  {description="0",  data= 0},
-  {description="1",  data= 1},
-  {description="2",  data= 2},
-  {description="3",  data= 3},
-  {description="4",  data= 4},
-  {description="5",  data= 5},
-  {description="10", data=10},
-  {description="15", data=15},
-  {description="20", data=20},
-  {description="25", data=25},
-  {description="30", data=30},
-  {description="35", data=35},
-  {description="40", data=40}
+configuration_options = {}
+
+
+
+__resource_counts = {
+  0, 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40
 }
 
+resource_counts = {}
+for i=1,#__resource_counts do 
+  resource_counts[i] = {
+    description=__resource_counts[i],
+    data=__resource_counts[i]
+  }
+end
 
-
-configuration_options = {}
 
 resource = {
   "Logs", "Flint", "Rocks", "Gold",
@@ -61,7 +58,7 @@ for i=1,#resource do
   configuration_options[i] = {
     name    = resource[i],
     label   = resource[i],
-    options = available_counts,
+    options = resource_counts,
     default = 0
   }
 end
