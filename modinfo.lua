@@ -34,6 +34,23 @@ forumthread = ""
 
 configuration_options = {}
 
+yes_no = {
+  {description = "No...", data = false},
+  {description = "Yes!",  data = true},
+}
+
+tools = {
+  "Backpack", "Axe", "Pickaxe", "Shovel"
+}
+
+for i=1,#tools do
+  configuration_options[#configuration_options + 1] = {
+    name    = tools[i],
+    label   = tools[i].."?",
+    options = yes_no,
+    default = false
+  }
+end
 
 
 __resource_counts = {
@@ -55,7 +72,7 @@ resource = {
 }
 
 for i=1,#resource do 
-  configuration_options[i] = {
+  configuration_options[#configuration_options + 1] = {
     name    = resource[i],
     label   = resource[i],
     options = resource_counts,

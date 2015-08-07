@@ -2,7 +2,20 @@
 local DebugSpawn = GLOBAL.DebugSpawn
 
 
-local resources_table = {
+function EquipCount(name)
+  local eq = GetModConfigData(name)
+  if eq == true then
+    return 1
+  else
+    return 0
+  end
+end
+
+
+local resources = {
+  { prefab = "axe",        count = EquipCount("Axe") },
+  { prefab = "pickaxe",    count = EquipCount("Pickaxe") },
+  { prefab = "shovel",     count = EquipCount("Shovel") },
   { prefab = "log",        count = GetModConfigData("Logs")  },
   { prefab = "flint",      count = GetModConfigData("Flint")  },
   { prefab = "rocks",      count = GetModConfigData("Rocks") },
@@ -11,6 +24,8 @@ local resources_table = {
   { prefab = "cutgrass",   count = GetModConfigData("Grass") },
   { prefab = "rocks",      count = GetModConfigData("Gears") },
 }
+
+
 
 
 
@@ -26,10 +41,6 @@ function Give(inst, prefab, count)
 end
 
 
-GLOBAL.BUGINV = resources_table
-GLOBAL.BUGOUT = Give
-
-
 function GrabAndGo(inst)
 
   local OnNewSpawn_prev = inst.OnNewSpawn
@@ -38,7 +49,13 @@ function GrabAndGo(inst)
     print("I knew it!  The government done gone to hell!")
 
 
-    for k, v in pairs(resources_table) do 
+    if(GetModConfigData("Backpack")) then
+      local backpack = DebugSpawn("backpack")
+      inst.components.inventory:Equip(backpack)
+    end
+
+
+    for k, v in pairs(resources) do 
       Give(inst, v["prefab"], v["count"])
     end
 
