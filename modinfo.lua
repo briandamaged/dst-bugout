@@ -1,7 +1,7 @@
 
-name = "Bugout Bag"
+name = "Bug-out Bag"
 
-description = "Everyone laughed at you when you were prepping for disaster.  Well, who's laughing now?"
+description = "Everyone laughed at you when you were prepping for disaster.\n\nWell, who's laughing now?"
 author      = "Brian Lauber (@BrianLauber)"
 
 version = "1.0.0"
@@ -40,7 +40,8 @@ yes_no = {
 }
 
 tools = {
-  "Backpack", "Axe", "Pickaxe", "Shovel"
+  "Backpack", "Axe", "Pickaxe", "Shovel", "Torch",
+  "Spear", "Log Suit"
 }
 
 for i=1,#tools do
@@ -67,7 +68,7 @@ end
 
 
 resource = {
-  "Logs", "Flint", "Rocks", "Gold",
+  "Jerky", "Logs", "Flint", "Rocks", "Gold",
   "Twigs", "Grass", "Gears", 
 }
 
