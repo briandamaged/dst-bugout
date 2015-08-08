@@ -26,8 +26,8 @@ server_filter_tags = {
   "bootstrap"
 }
 
--- icon_atlas = "alwaysonstatus.xml"
--- icon = "alwaysonstatus.tex"
+icon_atlas = "images/bugout.xml"
+icon = "bugout.tex"
 
 forumthread = ""
 
