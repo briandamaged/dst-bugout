@@ -26,6 +26,7 @@ local resources = {
   { prefab = "goldnugget", count = GetModConfigData("Gold") },
   { prefab = "twigs",      count = GetModConfigData("Twigs") },
   { prefab = "cutgrass",   count = GetModConfigData("Grass") },
+  { prefab = "silk",       count = GetModConfigData("Spider Silk") },
   { prefab = "gears",      count = GetModConfigData("Gears") },
 }
 
