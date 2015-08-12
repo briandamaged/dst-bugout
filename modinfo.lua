@@ -4,7 +4,7 @@ name = "Bug-out Bag"
 description = "Everyone laughed at you when you were prepping for disaster.\n\nWell, who's laughing now?"
 author      = "Brian Lauber (@BrianLauber)"
 
-version = "1.1.0"
+version = "1.2.0"
 
 --This lets other players know if your mod is out of date. This typically needs to be updated every time there's a new game update.
 api_version = 10
@@ -68,8 +68,8 @@ end
 
 
 resource = {
-  "Jerky", "Logs", "Flint", "Rocks", "Gold",
-  "Twigs", "Grass", "Spider Silk", "Gears", 
+  "Jerky", "Logs", "Charcoal", "Flint", "Rocks", "Gold",
+  "Twigs", "Grass", "Manure", "Spider Silk", "Gears", 
 }
 
 for i=1,#resource do 
